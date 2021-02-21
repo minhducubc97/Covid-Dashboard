@@ -150,8 +150,6 @@ const Notice = ({ language }) => (
         </div>
       </div>
     </div>
-
-    {/* <hr style={{ background: '#343a40' }} /> */}
   </div>
 );
 

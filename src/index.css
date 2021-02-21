@@ -65,8 +65,7 @@ body {
   width: 45px;
   padding-left: 4px;
 }
-/* hover */
-/* Grow Shadow */
+
 .hvr-grow-shadow {
   display: inline-block;
   vertical-align: middle;
@@ -86,7 +85,6 @@ body {
   transform: scale(1.1);
 }
 
-/* Bob */
 @-webkit-keyframes hvr-bob {
   0% {
     -webkit-transform: translateY(-8px);
@@ -153,7 +151,6 @@ body {
   animation-direction: normal, alternate;
 }
 
-/* Wobble Vertical */
 @-webkit-keyframes hvr-wobble-vertical {
   16.65% {
     -webkit-transform: translateY(8px);
