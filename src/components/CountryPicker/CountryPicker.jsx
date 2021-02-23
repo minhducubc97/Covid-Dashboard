@@ -15,28 +15,18 @@ const CountryPicker = ({ handleCountryChange, localData, country, language }) =>
   }, [setFetchedCountryData]);
 
   return (
-    <div className='row justify-content-between align-items-center p-3'>
-      <div className='col-md-12 text-center'>
-        <h2 className='mb-5'>
+    <div className='row justify-content-center align-items-center'>
+      <div className='col-md-12 text-center mt-4'>
+        <h2>
           {language === 'vn' ? (
-            <p>Bạn đang xem thông tin về nước {country}</p>
+            <p>Thông tin về nước {country}</p>
           ) : (
             <p>{country}'s Information</p>
           )}
         </h2>
-      </div>
-      <div className='my-3 d-flex align-items-center'>
-        <h4 className='en mb-0'>
-          {localData?.country ? (
-            localData.country
-          ) : (
-            <small className='en text-primary'>Loading . . .</small>
-          )}
-        </h4>
-        &nbsp; &nbsp;
         <div>
           {localData?.flag ? (
-            <img src={localData.flag} style={{ width: '35px' }} alt='&nbsp;' />
+            <img src={localData.flag} style={{ width: '70px' }} alt='&nbsp;' />
           ) : null}
         </div>
       </div>

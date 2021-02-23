@@ -1,11 +1,11 @@
 import React from 'react';
-import './Notice.css';
+import './Awareness.css';
 
-const Notice = ({ language }) => (
+const Awareness = ({ language }) => (
   <div>
     <hr style={{ background: '#343a40' }} />
     <div className='row text-center tex-lg-left'>
-      <div className='col-lg-12 col-md-12 col-sm-12 mb-4'>
+      <div className='col-lg-12 col-md-12 col-sm-12 mb-4 mt-4'>
         <div className='page-title '>
           <div className='title-center'>
             {language === 'vn' ? (
@@ -153,4 +153,4 @@ const Notice = ({ language }) => (
   </div>
 );
 
-export default Notice;
+export default Awareness;

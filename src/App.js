@@ -3,9 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './index.css'
 import Navbar from './components/Navbar/Navbar'
 import Cards from './components/Cards/Cards'
-import Charts from './components/Charts/Charts'
 import Country from './components/Country/Country'
-import Notice from './components/Notice/Notice'
+import Awareness from './components/Awareness/Awareness'
 import Footer from './components/Footer/Footer'
 import { fetchData, fetchLocalCountry } from './api/Covid19Api';
 
@@ -46,19 +45,14 @@ function App() {
                 <Navbar font='font-en' language='en' link='/vn' nav='Vietnamese' />
                 <Cards data={data} language='en' />
                 <div className='container'>
+                  <hr style={{ background: '#343a40' }} />
                   <Country
                     country={country}
                     data={localData}
                     handleCountryChange={handleCountryChange}
                     language='en'
                   />
-                  <Charts
-                    font='font-en'
-                    msg={`Last 30 day's information of ${country}`}
-                    country={country}
-                    language='en'
-                  />
-                  <Notice language='en' />
+                  <Awareness language='en' />
                 </div>
                 <Footer font='font-en' language='en' />
               </Fragment>
@@ -80,13 +74,7 @@ function App() {
                     handleCountryChange={handleCountryChange}
                     language='vn'
                   />
-                  <Charts
-                    font='font-en'
-                    msg={`Thông tin trong vòng 30 ngày gần nhất của ${country}`}
-                    country={country}
-                    language='vn'
-                  />
-                  <Notice language='vn' />
+                  <Awareness language='vn' />
                 </div>
                 <Footer font='font-en' language='vn' />
               </Fragment>

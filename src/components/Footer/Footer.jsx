@@ -1,16 +1,14 @@
 import React from 'react';
 const Footer = ({ font, language }) => (
-  <footer className='page-footer font-small mdb-color pt-2'>
-    <div className='container text-center text-md-left'>
-      <div className='row d-flex align-items-center'>
-        <div className='col-md-7 col-lg-8'>
+  <footer className='page-footer font-small mdb-color bg-secondary pt-2'>
+      <div className='d-flex flex-column'>
+        <div>
           <p className='lead text-center mb-0 p-2'>
             {language === 'vn' ? (
               <>
                 Được viết bởi 
-                <i className='fas heart fa-heart mx-2'></i> 
                 <a
-                  className='text-primary font-weight-bold'
+                  className='text-info font-weight-bold'
                   href='https://ducnguyen.site/'
                   target='blank'
                 >
@@ -21,9 +19,8 @@ const Footer = ({ font, language }) => (
             ) : (
               <>
                 Developed by 
-                <i className='fas heart fa-heart mx-2'></i>
                 <a
-                  className='text-primary font-weight-bold'
+                  className='text-info font-weight-bold'
                   href='https://ducnguyen.site/'
                   target='blank'
                 >
@@ -34,8 +31,7 @@ const Footer = ({ font, language }) => (
             )}
           </p>
         </div>
-
-        <div className='col-md-5 col-lg-4 ml-lg-0'>
+        <div>
           <div className='text-center text-md-right'>
             <ul className='list-unstyled list-inline'>
               <li className='list-inline-item'>
@@ -60,7 +56,6 @@ const Footer = ({ font, language }) => (
           </div>
         </div>
       </div>
-    </div>
   </footer>
 );
 

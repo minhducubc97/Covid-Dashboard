@@ -6,16 +6,15 @@ const Navbar = ({ link, nav, font, language }) => (
   <div className='navbar navbar-dark bg-primary sticky-top border-bottom'>
     <div className='container'>
       <div className='d-flex align-items-center'>
+        <h1 className='mb-0 text-white font-weight-bold'>
+          COVID-19
+        </h1>
         <img
-          className='logo'
+          className='logo ml-3'
           src={logo}
           style={{ width: '55px' }}
           alt='&nbsp;'
         />
-
-        <h1 className='mb-0 ml-3 text-white font-weight-bold'>
-          COVID-19
-        </h1>
       </div>
       <ul className='navbar-nav flex-row ml-auto'>
         <li className='nav-item ml-3'>

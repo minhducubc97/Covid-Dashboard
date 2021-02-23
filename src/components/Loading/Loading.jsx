@@ -1,5 +1,5 @@
 import React from 'react';
-const Spinner = () => (
+const Loading = () => (
   <svg
     className='clock'
     xmlns='http://www.w3.org/2000/svg'
@@ -55,4 +55,4 @@ const Spinner = () => (
   </svg>
 );
 
-export default Spinner;
+export default Loading;

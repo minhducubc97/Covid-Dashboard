@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { fetchDaily } from '../../api/Covid19Api';
 import Chart from 'react-apexcharts';
 import { Bar } from 'react-chartjs-2';
-import Spinner from '../Spinner/Spinner';
+import Loading from '../Loading/Loading';
 
-const Charts = ({ msg, font, country, language }) => {
+const CountryChart = ({ msg, font, country, language }) => {
   const [dailyData, setDailyData] = useState({});
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const Charts = ({ msg, font, country, language }) => {
   if (!dailyData) {
     return (
       <div className='text-center'>
-        <Spinner />
+        <Loading />
       </div>
     );
   }
@@ -66,11 +66,13 @@ const Charts = ({ msg, font, country, language }) => {
   ) : null;
 
   return (
-    <div className='col-lg- col-md-12 col-sm-12 mb-4 mt-5'>
-      <h4 className={`${font} text-secondary`}>{msg}</h4>
-      <div>{lineChart}</div> 
+    <div className='row local'>
+        <div className='col-lg- col-md-12 col-sm-12 mt-3'>
+        <h5 className={`${font}`}>{msg}</h5>
+        <div>{lineChart}</div> 
+        </div>
     </div>
   );
 };
 
-export default Charts;
+export default CountryChart;

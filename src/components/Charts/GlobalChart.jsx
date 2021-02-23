@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { fetchData } from '../../api/Covid19Api';
 import { Pie } from 'react-chartjs-2';
-import Spinner from '../Spinner/Spinner';
+import Loading from '../Loading/Loading';
 
-const GlobalDataChart = () => {
+const GlobalChart = () => {
   const [globalData, setGlobalData] = useState({});
   useEffect(() => {
     const fetchDataAPI = async () => {
@@ -11,7 +11,7 @@ const GlobalDataChart = () => {
     };
     fetchDataAPI();
   }, []);
-  if (!globalData?.cases) return <Spinner />;
+  if (!globalData?.cases) return <Loading />;
   const pie = globalData?.cases ? (
     <Pie 
     data={{
@@ -39,4 +39,4 @@ const GlobalDataChart = () => {
   return pie;
 };
 
-export default GlobalDataChart;
+export default GlobalChart;

@@ -1,5 +1,5 @@
 import React from 'react';
-import GlobalDataChart from '../Charts/GlobalDataChart';
+import GlobalChart from '../Charts/GlobalChart';
 import LastUpdate from '../LastUpdateInfo/LastUpdateInfo';
 import { globalData } from '../../Data/data';
 import Card from '../Card/Card';
@@ -17,7 +17,7 @@ const Cards = ({ data, language }) => {
 		  </div>
 
 		  <div className='col-lg-8 col-sm-12 col-md-12 text-center'>
-			<GlobalDataChart />
+			<GlobalChart />
 		  </div>
 
 		  <div className='col-lg-4 my-3'>
