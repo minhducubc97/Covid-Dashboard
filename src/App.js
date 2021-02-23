@@ -12,7 +12,7 @@ import { fetchData, fetchLocalCountry } from './api/Covid19Api';
 function App() {
     const [data, setData] = useState({});
   const [localData, setLocalData] = useState({});
-  const [country, setCountry] = useState('Vietnam');
+  const [country, setCountry] = useState('Canada');
 
   useEffect(() => {
     const fetchFunc = async () => {
@@ -36,42 +36,14 @@ function App() {
   return (
     <Router>
       <div>
-        <Switch>
-          {/* Vietnamese UI */}
+        <Switch>          
+          {/* English UI */}
           <Route
             exact
             path='/'
             render={props => (
               <Fragment>
-                <Navbar font='font-en' language='vn' link='/en' nav='English' />
-                <Cards data={data} language='vn' />
-                <div className='container'>
-                  <Country
-                    country={country}
-                    data={localData}
-                    handleCountryChange={handleCountryChange}
-                    language='vn'
-                  />
-                  <Charts
-                    font='font-en'
-                    msg={`Thông tin trong vòng 30 ngày gần nhất của ${country}`}
-                    country={country}
-                    language='vn'
-                  />
-                  <Notice language='vn' />
-                </div>
-                <Footer font='font-en' language='vn' />
-              </Fragment>
-            )}
-          />
-
-          {/* English UI */}
-          <Route
-            exact
-            path='/en'
-            render={props => (
-              <Fragment>
-                <Navbar font='font-en' language='en' link='/' nav='Tiếng Việt' />
+                <Navbar font='font-en' language='en' link='/vn' nav='Vietnamese' />
                 <Cards data={data} language='en' />
                 <div className='container'>
                   <Country
@@ -89,6 +61,34 @@ function App() {
                   <Notice language='en' />
                 </div>
                 <Footer font='font-en' language='en' />
+              </Fragment>
+            )}
+          />
+
+          {/* Vietnamese UI */}
+          <Route
+            exact
+            path='/vn'
+            render={props => (
+              <Fragment>
+                <Navbar font='font-en' language='vn' link='/' nav='Tiếng Anh' />
+                <Cards data={data} language='vn' />
+                <div className='container'>
+                  <Country
+                    country={country}
+                    data={localData}
+                    handleCountryChange={handleCountryChange}
+                    language='vn'
+                  />
+                  <Charts
+                    font='font-en'
+                    msg={`Thông tin trong vòng 30 ngày gần nhất của ${country}`}
+                    country={country}
+                    language='vn'
+                  />
+                  <Notice language='vn' />
+                </div>
+                <Footer font='font-en' language='vn' />
               </Fragment>
             )}
           />

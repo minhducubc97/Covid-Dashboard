@@ -25,58 +25,6 @@ const Charts = ({ msg, font, country, language }) => {
 
   const { confirmed, deaths, recovere, date } = dailyData;
 
-  // const doughnutChart = confirmed ? (
-  //   <Doughnut
-  //     data={{
-  //       type: '',
-  //       labels: ['Confirmed', 'Deaths', 'Recovered'],
-  //       datasets: [
-  //         {
-  //           label: 'COVID-19',
-  //           backgroundColor: [
-  //             'rgba(26, 16, 83, 0.603)',
-  //             'rgb(255, 99, 132)',
-  //             'rgb(29, 209, 161)',
-  //           ],
-  //           borderColor: '#fff',
-  //           data: [
-  //             confirmed[confirmed.length - 1],
-  //             deaths[deaths.length - 1],
-  //             recovere[recovere.length - 1],
-  //           ],
-  //         },
-  //       ],
-  //     }}
-  //   />
-  // ) : null;
-
-  const barChart = confirmed ? (
-    <Bar
-      data={{
-        labels: ['Infected', 'Deaths', 'Recovered'],
-        datasets: [
-          {
-            label: 'People',
-            backgroundColor: [
-              'rgba(0, 0, 255, 0.5)',
-              'rgba(255, 0, 0, 0.5)',
-              'rgba(0, 255, 0, 0.5)',
-            ],
-            data: [
-              confirmed[confirmed.length - 1],
-              deaths[deaths.length - 1],
-              recovere[recovere.length - 1],
-            ],
-          },
-        ],
-      }}
-      options={{
-        legend: { display: false },
-        title: { display: true },
-      }}
-    />
-  ) : null;
-
   const lineChart = dailyData.confirmed ? (
     <Chart
       options={{
@@ -120,13 +68,7 @@ const Charts = ({ msg, font, country, language }) => {
   return (
     <div className='col-lg- col-md-12 col-sm-12 mb-4 mt-5'>
       <h4 className={`${font} text-secondary`}>{msg}</h4>
-      <div>{lineChart}</div>
-      <h5>
-        {language === 'vn'
-          ? `Bang hiện tại ở ${country}`
-          : `Current state in ${country}`}
-      </h5>
-      <div>{barChart}</div>
+      <div>{lineChart}</div> 
     </div>
   );
 };

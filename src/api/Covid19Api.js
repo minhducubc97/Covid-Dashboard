@@ -35,7 +35,7 @@ export const fetchData = async () => {
 // Local Country
 
 export const fetchLocalCountry = async (countryName) => {
-  let selectCountry = 'Vietnam';
+  let selectCountry = 'Canada';
   if (countryName) {
     selectCountry = countryName;
   }

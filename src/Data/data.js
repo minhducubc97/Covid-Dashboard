@@ -22,7 +22,7 @@ export const globalData = (data, language) => {
       endData: data.active,
       textStyle: 'text-dark',
       smallText: '',
-      text: language === 'vn' ? 'TỔNG SỐ CA ĐANG BỊ' : 'ACTIVE CASES',
+      text: language === 'vn' ? 'TỔNG SỐ CA ĐANG BỊ' : 'TOTAL ACTIVE CASES',
     },
     {
       id: 2,

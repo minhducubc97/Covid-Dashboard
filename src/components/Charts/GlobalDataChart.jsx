@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { fetchData } from '../../api/Covid19Api';
-import { Polar } from 'react-chartjs-2';
+import { Pie } from 'react-chartjs-2';
 import Spinner from '../Spinner/Spinner';
 
 const GlobalDataChart = () => {
@@ -12,23 +12,23 @@ const GlobalDataChart = () => {
     fetchDataAPI();
   }, []);
   if (!globalData?.cases) return <Spinner />;
-  const polar = globalData?.cases ? (
-    <Polar 
+  const pie = globalData?.cases ? (
+    <Pie 
     data={{
-      labels: ['Confirmed', 'Deaths', 'Recovered'],
+      labels: ['Confirmed', 'Recovered', 'Deaths'],
       datasets: [
         {
           label: 'COVID-19',
           backgroundColor: [
-            'rgba(26, 16, 83, 0.603)',
-            'rgb(255, 99, 132)',
-            'rgb(29, 209, 161)',
+            '#336699',
+            'green',
+            'red',
           ],
           borderColor: '#fff',
           data: [
             globalData?.cases,
-            globalData?.deaths,
             globalData?.recovered,
+            globalData?.deaths,
           ],
         },
       ],
@@ -36,7 +36,7 @@ const GlobalDataChart = () => {
      />
   ) : null;
 
-  return polar;
+  return pie;
 };
 
 export default GlobalDataChart;

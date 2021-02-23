@@ -21,7 +21,7 @@ const CountryPicker = ({ handleCountryChange, localData, country, language }) =>
           {language === 'vn' ? (
             <p>Bạn đang xem thông tin về nước {country}</p>
           ) : (
-            <p>You are viewing {country} data</p>
+            <p>{country}'s Information</p>
           )}
         </h2>
       </div>
@@ -53,7 +53,7 @@ const CountryPicker = ({ handleCountryChange, localData, country, language }) =>
               option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
             }
           >
-            <Option value='vietnam'>Vietnam</Option>
+            <Option value='canada'>Canada</Option>
             {fetchedCountryData?.map((data, i) => (
               <Option key={i} value={data.code}>
                 {data.country}
