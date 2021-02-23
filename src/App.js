@@ -68,6 +68,7 @@ function App() {
                 <Navbar font='font-en' language='vn' link='/' nav='Tiếng Anh' />
                 <Cards data={data} language='vn' />
                 <div className='container'>
+                  <hr style={{ background: '#343a40' }} />
                   <Country
                     country={country}
                     data={localData}
