@@ -9,9 +9,9 @@ const Awareness = ({ language }) => (
         <div className='page-title '>
           <div className='title-center'>
             {language === 'vn' ? (
-              <h2>Hiểu biết về Coronavirus (Covid 19)</h2>
+              <h2>Hiểu biết về Covid-19</h2>
             ) : (
-              <h2>Awareness for Coronavirus (Covid 19)</h2>
+              <h2>Awareness for Covid-19</h2>
             )}
           </div>
         </div>
@@ -20,18 +20,18 @@ const Awareness = ({ language }) => (
           <div className='field-item text-left'>
             <p>
               {language === 'vn' ? (
-                <strong>Coronavirus (SARS-CoV-2) và Covid-19 là gì?</strong>
+                <strong>Covid-19 là gì?</strong>
               ) : (
-                <strong>What is Coronavirus (SARS-CoV-2) and Covid-19?</strong>
+                <strong>What is Covid-19?</strong>
               )}
             </p>
             {language === 'vn' ? (
               <p>
-                Coronavirus (CoV) là vi-rút RNA gây bệnh ở động vật có vú và chim. Ở người và chim, chúng gây bệnh về hô hấp, có thể rất nhẹ và cũng có thể gây chết người.{' '}
+                Covid-19 là vi-rút RNA gây bệnh ở động vật có vú và chim. Ở người và chim, chúng gây bệnh về hô hấp, có thể rất nhẹ và cũng có thể gây chết người.{' '}
               </p>
             ) : (
               <p>
-                Coronavirus (CoV) is a RNA virus that causes diseases in mammals and birds. In humans and birds, they cause respiratory tract infections that can range from mild to lethal.
+                Covid-19 is a RNA virus that causes diseases in mammals and birds. In humans and birds, they cause respiratory tract infections that can range from mild to lethal.
               </p>
             )}
           </div>

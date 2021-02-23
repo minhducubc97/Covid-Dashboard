@@ -30,7 +30,6 @@ body {
 
 .critical {
   border: 8px solid #ff3838 !important;
-  border-radius: 5px;
 }
 
 .font-en {
@@ -59,12 +58,12 @@ body {
   margin: 20px;
   display: inline-block;
 }
-
+/* 
 .criticalImg {
   height: 40px;
   width: 45px;
   padding-left: 4px;
-}
+} */
 
 .hvr-grow-shadow {
   display: inline-block;

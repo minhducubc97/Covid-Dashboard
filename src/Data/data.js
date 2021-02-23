@@ -1,15 +1,15 @@
-import casesImg from '../images/infected_cases.svg';
-import deathsImg from '../images/deaths_cases.svg';
-import recoveredImg from '../images/recoveries_from_covid.svg';
-import criticalImg from '../images/criticalImg.png';
-import activeCasesImg from '../images/activeCasesImg.svg';
+import casesLogo from '../images/casesLogo.png';
+import deathsLogo from '../images/deathCasesLogo.png';
+import recoveredLogo from '../images/recoveredCasesLogo.svg';
+import criticalLogo from '../images/criticalLogo.png';
+import activeCasesLogo from '../images/activeCasesLogo.svg';
 
 export const globalData = (data, language) => {
   const modifiedData = [
     {
       id: 0,
       name: 'Cases',
-      img: casesImg,
+      img: casesLogo,
       endData: data.cases,
       textStyle: 'text-info',
       smallText: '',
@@ -18,7 +18,7 @@ export const globalData = (data, language) => {
     {
       id: 1,
       name: 'Active case',
-      img: activeCasesImg,
+      img: activeCasesLogo,
       endData: data.active,
       textStyle: 'text-dark',
       smallText: '',
@@ -27,7 +27,7 @@ export const globalData = (data, language) => {
     {
       id: 2,
       name: 'Deaths',
-      img: deathsImg,
+      img: deathsLogo,
       endData: data.deaths,
       textStyle: 'text-danger',
       smallText: '',
@@ -36,7 +36,7 @@ export const globalData = (data, language) => {
     {
       id: 3,
       name: 'Recover',
-      img: recoveredImg,
+      img: recoveredLogo,
       endData: data.recovered,
       textStyle: 'text-success',
       smallText: '',
@@ -51,7 +51,7 @@ export const localData = (data, language) => {
   const modifiedData = [
     {
       name: 'Confirmed',
-      img: casesImg,
+      img: casesLogo,
       endData: data.cases,
       textStyle: 'text-info',
       smallText: '',
@@ -59,7 +59,7 @@ export const localData = (data, language) => {
     },
     {
       name: 'Deaths',
-      img: deathsImg,
+      img: deathsLogo,
       endData: data.deaths,
       textStyle: 'text-danger',
       smallText: '',
@@ -67,7 +67,7 @@ export const localData = (data, language) => {
     },
     {
       name: 'Recovered',
-      img: recoveredImg,
+      img: recoveredLogo,
       endData: data.recovered,
       textStyle: 'text-success',
       smallText: '',
@@ -78,7 +78,7 @@ export const localData = (data, language) => {
   const todaysData = [
     {
       name: 'Confirmed',
-      img: casesImg,
+      img: casesLogo,
       imgClass: 'img-fluid',
       endData: data.todayCases,
       textStyle: 'text-info',
@@ -87,7 +87,7 @@ export const localData = (data, language) => {
     },
     {
       name: 'Deaths',
-      img: deathsImg,
+      img: deathsLogo,
       imgClass: 'img-fluid',
       endData: data.todayDeaths,
       textStyle: 'text-danger',
@@ -96,7 +96,7 @@ export const localData = (data, language) => {
     },
     {
       name: 'Recoverd',
-      img: criticalImg,
+      img: criticalLogo,
       imgClass: 'img-fluid criticalImg',
       endData: data.critical,
       textStyle: 'text-warning',
