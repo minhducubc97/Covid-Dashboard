@@ -1,61 +1,50 @@
 import React from 'react';
 const Footer = ({ font, language }) => (
-  <footer className='page-footer font-small mdb-color bg-secondary pt-2'>
+  <footer className='page-footer font-small mdb-color bg-secondary pt-2 mt-4'>
       <div className='d-flex flex-column'>
-        <div>
-          <p className='lead text-center mb-0 p-2'>
+          <p className='lead text-center text-white mb-0 p-2'>
             {language === 'vn' ? (
-              <>
-                Được viết bởi 
-                <a
-                  className='text-info font-weight-bold'
-                  href='https://ducnguyen.site/'
-                  target='blank'
-                >
-                  {' '}
-                  Đức Nguyễn
-                </a>
-              </>
+                <>
+                Được viết bởi Đức Nguyễn
+                </>
             ) : (
               <>
-                Developed by 
-                <a
-                  className='text-info font-weight-bold'
-                  href='https://ducnguyen.site/'
-                  target='blank'
-                >
-                 {' '}
-                  Duc Nguyen
-                </a>
+                Developed by Duc Nguyen
               </>
             )}
           </p>
-        </div>
-        <div>
-          <div className='text-center text-md-right'>
+          <div className='text-center'>
             <ul className='list-unstyled list-inline'>
               <li className='list-inline-item'>
                 <a
-                  href='https://github.com/minhducubc97'
-                  className='btn-floating btn-sm rgba-white-slight mx-1 github'
+                  href='https://www.ducnguyen.site'
+                  className='btn-floating btn-lg btn-dark'
                   target='blank'
                 >
-                  <i className='fab fa-github fa-2x'></i>
+                  <i className='fa fa-info-circle'></i>
+                </a>
+              </li>
+              <li className='list-inline-item'>
+                <a
+                  href='https://github.com/minhducubc97'
+                  className='btn-floating btn-lg btn-dark'
+                  target='blank'
+                >
+                  <i className='fa fa-github'></i>
                 </a>
               </li>
               <li className='list-inline-item'>
                 <a
                   href='https://www.linkedin.com/in/duc-nguyen-096881130/'
-                  className='btn-floating btn-sm rgba-white-slight mx-1 linkedin'
+                  className='btn-floating btn-lg btn-dark'
                   target='blank'
                 >
-                  <i className='fab fa-linkedin fa-2x'></i>
+                  <i className='fa fa-linkedin'></i>
                 </a>
               </li>
             </ul>
           </div>
         </div>
-      </div>
   </footer>
 );
 
