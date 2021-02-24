@@ -55,29 +55,47 @@ const Awareness = ({ language }) => (
                     src='https://user-images.githubusercontent.com/58518192/80411047-5b620a80-88ed-11ea-8f44-9d1385f1666a.png'
                   />
                 </p>
-
+                <div className='ml-2 text-left'>
+                    <p>
+                        {language === 'vn'
+                        ? 'Triệu chứng của Covid-19 khác nhau với mỗi người. Chúng cũng có thể khác nhau ở từng độ tuổi. Những triệu chứng phổ biến nhất gồm có:'
+                        : 'Symptoms of Covid-19 can vary from person to person. They may also vary in different age groups. Some of the more commonly reported symptoms include:'}
+                    </p>
+                </div>
                 <ul className='list-group list-group-flush'>
                   <li className='list-group-item'>
                     {language === 'vn'
-                      ? 'Triệu chứng thường xuất hiện trong vòng 2-14 ngày.'
-                      : 'Symptoms generally appear within 2-14 days.'}
+                      ? 'Ho khan'
+                      : 'New or worsening cough'}
                   </li>
                   <li className='list-group-item'>
                     {language === 'vn'
-                      ? 'Trong hầu hết các trường hợp, triệu chứng đầu tiên là sốt (hơn 100 độ F/38 độ C).'
-                      : 'In most cases, the first symptom is fever (more than 100 degrees Fahrenheit/38 degree Celsius).'}
+                      ? 'Thở dốc hoặc khó thở'
+                      : 'Shortness of breath or difficulty breathing'}
                   </li>
                   <li className='list-group-item'>
                     {language === 'vn'
-                      ? 'Ho khan/đau họng hoặc vấn đề về hô hấp cũng có thể xảy ra.'
-                      : 'Dry cough/sore throat or any other respiratory issues may also occur.'}
+                      ? 'Nhiệt độ cơ thể ít nhất 38°C' 
+                      : 'Temperature equal to or over 38°C'}
                   </li>
                   <li className='list-group-item'>
                     {language === 'vn'
-                      ? 'Những căn bệnh sẵn có (béo phì, phế quản, bệnh tim, ... có thể làm cho bệnh trở nên trầm trọng hơn.' 
-                      : 'Other existing illnesses (diabetes/hypertension/respiratory/heart disease/kidney problems etc.) can result in worsening conditions.'}
+                      ? 'Cảm thấy mệt mỏi' 
+                      : 'Feeling feverish'}
+                  </li>
+                  <li className='list-group-item'>
+                    {language === 'vn'
+                      ? 'Mất đi vị giác' 
+                      : 'Loss of smell or taste'}
                   </li>
                 </ul>
+                <div className='ml-2 mt-2 text-left'>
+                    <p>
+                        {language === 'vn'
+                        ? 'Triệu chứng sẽ xuất hiện trong vòng 14 ngày kể từ khi tiếp xúc với Covid-19.'
+                        : 'Symptoms may take up to 14 days to appear after exposure to Covid-19.'}
+                    </p>
+                </div>
               </div>
             </div>
           </div>
@@ -101,49 +119,57 @@ const Awareness = ({ language }) => (
                     src='https://user-images.githubusercontent.com/58518192/80411004-49806780-88ed-11ea-9b86-975f2db7b411.png'
                   />
                 </p>
-
+                <div className='ml-2 text-left'>
+                    <p>
+                    {language === 'vn'
+                      ? 'Để ngăn ngừa sự lây lan Covid-19:'
+                      : 'To prevent the spread of Covid-19:'}
+                    </p>
+                </div>
                 <ul className='list-group list-group-flush'>
                   <li className='list-group-item'>
                     {language === 'vn'
-                      ? 'Rửa tay thường xuyên với xà phòng/đồ có cồn ít nhất 30 giây.'
-                      : 'Wash your hands frequently with soap/alcoholic sanitizer for at least 30 seconds.'}
+                      ? 'Rửa tay thường xuyên với xà phòng và nước, hoặc đồ có cồn.'
+                      : 'Clean your hands often. Use soap and water, or an alcohol-based hand rub.'}
                   </li>
                   <li className='list-group-item'>
                     {language === 'vn'
-                      ? 'Không chạm vào mắt, mũi, miệng với tay bẩn.'
-                      : 'Do not touch your eyes, nose and mouth with unwashed hands.'}
+                      ? 'Đứng xa người hắt xì hơi hoặc ho.'
+                      : 'Maintain a safe distance from anyone who is coughing or sneezing.'}
                   </li>
                   <li className='list-group-item'>
                     {language === 'vn'
-                      ? 'Sử dụng tay/giấy/vải để che miệng khi ho hoặc hắt xì.'
-                      : 'Use arm/tissue/cloth to cover your mouth while coughing or sneezing.'}
+                      ? 'Đeo khẩu trang khi không thể giãn cách xã hội.'
+                      : 'Wear a mask when physical distancing is not possible.'}
                   </li>
                   <li className='list-group-item'>
                     {language === 'vn'
-                      ? 'Hạn chế tụ tập đông người.'
-                      : 'Avoid gatherings.'}
+                      ? 'Không chạm vào mắt, mũi, miệng.'
+                      : 'Do not touch your eyes, nose or mouth.'}
                   </li>
                   <li className='list-group-item'>
                     {language === 'vn'
-                      ? 'Giãn cách xã hội, đứng cách nhau ít nhất 2 mét.'
-                      : 'Maintain social distancing by keeping at least a 6 ft distance from people around you.'}
+                      ? 'Che mũi và miệng bằng tay hoặc giấy khi ho hoặc hắt xì.'
+                      : 'Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.'}
                   </li>
                   <li className='list-group-item'>
                     {language === 'vn'
-                      ? 'Ở nhà càng nhiều càng tốt.'
-                      : 'Stay home as much as possible.'}
+                      ? 'Ở nhà nếu bạn cảm thấy không ổn.'
+                      : 'Stay home if you feel unwell.'}
                   </li>
                   <li className='list-group-item'>
                     {language === 'vn'
-                      ? 'Tự cách ly nếu mình vừa đi xa về.'
-                      : 'Self-quarantine in case of any recent travel.'}
-                  </li>
-                  <li className='list-group-item'>
-                    {language === 'vn'
-                      ? 'Tránh tiếp xúc với người đã bị nhiễm.'
-                      : 'Avoid contact with people who have already been infected.'}
+                      ? 'Nếu bạn bị sốt, ho hoặc khó thở, hay liên lạc với cơ sở y tế.'
+                      : 'If you have a fever, cough and difficulty breathing, seek medical attention.'}
                   </li>
                 </ul>
+                <div className='ml-2 mt-2 text-left'>
+                    <p>
+                    {language === 'vn'
+                      ? 'Gọi điện để cơ quan y tế hướng dẫn bạn liên lạc với trự sở y tế phù hợp. Điều này bảo vệ bạn, và ngăn ngừa sự lây lan của vi-rút và các bệnh lây nhiễm khác.'
+                      : 'Calling in advance allows your healthcare provider to quickly direct you to the right health facility. This protects you, and prevents the spread of viruses and other infections.'}
+                    </p>
+                </div>
               </div>
             </div>
           </div>
