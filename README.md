@@ -11,7 +11,9 @@ Covid Dashboard web app that visualizes Covid data as well as gives people cruci
 ## References/Libraries:
 
 - React
+- React-leaflet
 - Bootstrap
+- [Papaparse](https://www.papaparse.com/)
 - [Open Disease Data](https://corona.lmao.ninja/)
 - [Font Awesome](https://fontawesome.com/)
 
