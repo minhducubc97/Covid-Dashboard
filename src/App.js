@@ -6,6 +6,7 @@ import Cards from './components/Cards/Cards'
 import Country from './components/Country/Country'
 import Awareness from './components/Awareness/Awareness'
 import Footer from './components/Footer/Footer'
+import Map from './components/Map/Map'
 import { fetchData, fetchLocalCountry } from './api/Covid19Api';
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
             render={props => (
               <Fragment>
                 <Navbar font='font-en' language='en' link='/vn' nav='Vietnamese' />
+                <Map/>
                 <Cards data={data} language='en' />
                 <div className='container'>
                   <hr style={{ background: '#343a40' }} />
@@ -52,7 +54,7 @@ function App() {
                     handleCountryChange={handleCountryChange}
                     language='en'
                   />
-                  <Awareness language='en' />
+                  <Awareness language='en'/>
                 </div>
                 <Footer font='font-en' language='en' />
               </Fragment>
@@ -65,7 +67,8 @@ function App() {
             path='/vn'
             render={props => (
               <Fragment>
-                <Navbar font='font-en' language='vn' link='/' nav='Tiếng Anh' />
+                <Navbar font='font-vn' language='vn' link='/' nav='Tiếng Anh' />
+                <Map/>
                 <Cards data={data} language='vn' />
                 <div className='container'>
                   <hr style={{ background: '#343a40' }} />
@@ -75,9 +78,9 @@ function App() {
                     handleCountryChange={handleCountryChange}
                     language='vn'
                   />
-                  <Awareness language='vn' />
+                  <Awareness language='vn'/>
                 </div>
-                <Footer font='font-en' language='vn' />
+                <Footer font='font-vn' language='vn' />
               </Fragment>
             )}
           />

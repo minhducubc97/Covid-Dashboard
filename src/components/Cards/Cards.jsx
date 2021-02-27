@@ -9,7 +9,7 @@ const Cards = ({ data, language }) => {
   const modifiedData = globalData(data, language);
 
   return (
-	<div className={`vn landing`}>
+	<div className={`landing`}>
 	  <div className='container'>
 		<div className='row py-5 justify-content-between align-items-center global'>
 		  <div className='col-md-12'>

@@ -101,7 +101,7 @@ export const localData = (data, language) => {
       endData: data.critical,
       textStyle: 'text-warning',
       smallText: '',
-      text: language === 'vn' ? 'SỐ CA ĐANG NGUY KỊCH' : 'Critical',
+      text: language === 'vn' ? 'SỐ CA NGUY KỊCH' : 'Critical',
     },
   ];
 

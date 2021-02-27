@@ -4,7 +4,7 @@ import Moment from 'react-moment';
 const lastUpdateInfo = ({ data, language }) => (
   <div className='row justify-content-between align-items-center'>
     <div className='col-sm-12 text-sm-center'>
-      <h2> {language === 'vn' ? 'Thông tin toàn cầu' : 'Global Information : '} </h2>
+      {language === 'vn' ? <h2 className='font-vn font-weight-bold'>Thông tin toàn cầu</h2> : <h2>Global Information</h2>} 
     </div>
     <div className='col-sm-12 text-sm-center'>
       <h5 className='en'>

@@ -18,7 +18,7 @@ const CountryTodaysData = ({ data, language }) => (
             <small className='en text-primary'>Loading . . .</small>
           )}
         </h2>
-        <h5 className='text-muted'>{data.text}</h5>
+        <p className='text-muted'>{data.text}</p>
       </div>
     </div>
   </div>

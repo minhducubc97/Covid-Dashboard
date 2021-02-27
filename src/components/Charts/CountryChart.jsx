@@ -24,47 +24,89 @@ const CountryChart = ({ msg, font, country, language }) => {
   }
 
   const { confirmed, deaths, recovere, date } = dailyData;
-
-  const lineChart = dailyData.confirmed ? (
-    <Chart
-      options={{
-        xaxis: {
-          type: 'datetime',
-          categories: date.map((da) => da),
-        },
-        tooltip: {
-          x: {
-            format: 'dd/MM/yy',
-          },
-        },
-        stroke: {
-          curve: 'smooth',
-        },
-        colors: ['#2E93fA', '#f36', 'green'],
-        legend: {
-          show: true,
-          fontSize: '20px',
-          itemMargin: {
-            horizontal: 10,
-            vertical: 25,
-          },
-        },
-      }}
-      series={[
-        {
-          name: 'Confirmed',
-          data: confirmed.map((con) => con),
-        },
-        { name: 'Deaths', data: deaths.map((de) => de) },
-        {
-          name: 'Recoverd',
-          data: recovere.map((re) => re),
-        },
-      ]}
-      type='area'
-    />
-  ) : null;
-
+  var lineChart;
+  if (language === 'vn') {
+    lineChart = dailyData.confirmed ? (
+        <Chart
+        options={{
+            xaxis: {
+            type: 'datetime',
+            categories: date.map((da) => da),
+            },
+            tooltip: {
+            x: {
+                format: 'dd/MM/yy',
+            },
+            },
+            stroke: {
+            curve: 'smooth',
+            },
+            colors: ['#2E93fA', '#f36', 'green'],
+            legend: {
+            show: true,
+            fontSize: '20px',
+            itemMargin: {
+                horizontal: 10,
+                vertical: 25,
+            },
+            },
+        }}
+        series={[
+            {
+            name: 'Số ca',
+            data: confirmed.map((con) => con),
+            },
+            { name: 'Tử vong', data: deaths.map((de) => de) },
+            {
+            name: 'Hồi phục',
+            data: recovere.map((re) => re),
+            },
+        ]}
+        type='area'
+        />
+    ) : null;
+  }
+  else {
+    lineChart = dailyData.confirmed ? (
+        <Chart
+        options={{
+            xaxis: {
+            type: 'datetime',
+            categories: date.map((da) => da),
+            },
+            tooltip: {
+            x: {
+                format: 'dd/MM/yy',
+            },
+            },
+            stroke: {
+            curve: 'smooth',
+            },
+            colors: ['#2E93fA', '#f36', 'green'],
+            legend: {
+            show: true,
+            fontSize: '20px',
+            itemMargin: {
+                horizontal: 10,
+                vertical: 25,
+            },
+            },
+        }}
+        series={[
+            {
+            name: 'Confirmed',
+            data: confirmed.map((con) => con),
+            },
+            { name: 'Deaths', data: deaths.map((de) => de) },
+            {
+            name: 'Recoverd',
+            data: recovere.map((re) => re),
+            },
+        ]}
+        type='area'
+        />
+    ) : null;
+  }
   return (
     <div className='row local'>
         <div className='col-lg- col-md-12 col-sm-12 mt-3'>

@@ -2,6 +2,7 @@
 
 body {
   font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
 }
 
 .cases {
@@ -36,6 +37,10 @@ body {
   font-family: 'Ubuntu', sans-serif;
 }
 
+.font-vn {
+  font-family: "Times New Roman", Times, serif;
+}
+
 .global p,
 .local p {
   font-size: 18px;
@@ -58,12 +63,6 @@ body {
   margin: 20px;
   display: inline-block;
 }
-/* 
-.criticalImg {
-  height: 40px;
-  width: 45px;
-  padding-left: 4px;
-} */
 
 .hvr-grow-shadow {
   display: inline-block;

@@ -19,9 +19,9 @@ const CountryPicker = ({ handleCountryChange, localData, country, language }) =>
       <div className='col-md-12 text-center mt-4'>
         <h2>
           {language === 'vn' ? (
-            <p>Thông tin về nước {country}</p>
+            <p className='font-vn font-weight-bold'>Thông tin về nước {country}</p>
           ) : (
-            <p>{country}'s Information</p>
+            <p className='font-en'>{country}'s Information</p>
           )}
         </h2>
         <div>

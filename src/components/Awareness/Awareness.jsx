@@ -9,22 +9,20 @@ const Awareness = ({ language }) => (
         <div className='page-title '>
           <div className='title-center'>
             {language === 'vn' ? (
-              <h2>Hiểu biết về Covid-19</h2>
+              <h2 className='font-vn font-weight-bold'>Hiểu biết về Covid-19</h2>
             ) : (
-              <h2>Awareness for Covid-19</h2>
+              <h2 className='font-en'>Awareness for Covid-19</h2>
             )}
           </div>
         </div>
 
         <div className='field field-type-text-textarea-with-summary field-body'>
           <div className='field-item text-left'>
-            <p>
-              {language === 'vn' ? (
-                <strong>Covid-19 là gì?</strong>
-              ) : (
-                <strong>What is Covid-19?</strong>
-              )}
-            </p>
+            {language === 'vn' ? (
+            <h5>Covid-19 là gì?</h5>
+            ) : (
+            <h5>What is Covid-19?</h5>
+            )}
             {language === 'vn' ? (
               <p>
                 Covid-19 là vi-rút RNA gây bệnh ở động vật có vú và chim. Ở người và chim, chúng gây bệnh về hô hấp, có thể rất nhẹ và cũng có thể gây chết người.{' '}
@@ -41,7 +39,7 @@ const Awareness = ({ language }) => (
       <div className='collapseBtn container col-lg-10 col-md-10 col-sm-12 mb-4'>
         <div id='accordion'>
           <div className='card panel-box-body panel-box'>
-            <div className='card-header text-left panel-head-title'>
+            <div className='card-header text-left panel-head-title bg-info'>
               <a className='h6' data-toggle='collapse' href='#collapseOne'>
                 {language === 'vn' ? 'Triệu chứng' : 'Symptoms'}
               </a>
@@ -101,7 +99,7 @@ const Awareness = ({ language }) => (
           </div>
 
           <div className='card panel-box'>
-            <div className='card-header text-left panel-head-title'>
+            <div className='card-header text-left panel-head-title bg-info'>
               <a
                 className='collapsed card-link h6'
                 data-toggle='collapse'
