@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import CovidMap from '../CovidMap/CovidMap';
 import CovidMapLegend from '../CovidMapLegend/CovidMapLegend';
-import LoadCountriesTask from './LoadCountriesTask'
+import MapCountries from './MapCountries'
 import Loading from '../Loading/Loading';
 
 const Map = () => {
     const [countries, setCountries] = useState([]); 
     const loadMap = () => {
-        const loadCountriesTask = new LoadCountriesTask();
-        loadCountriesTask.load(setCountries);
+        var mapCountries = new MapCountries();
+        mapCountries.onLoad(setCountries);
     }
     useEffect(loadMap, []);
     return (
