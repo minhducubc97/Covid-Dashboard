@@ -10,7 +10,7 @@ import Map from './components/Map/Map'
 import { fetchData, fetchLocalCountry } from './api/Covid19Api';
 
 function App() {
-    const [data, setData] = useState({});
+  const [data, setData] = useState({});
   const [localData, setLocalData] = useState({});
   const [country, setCountry] = useState('Canada');
 
@@ -18,7 +18,6 @@ function App() {
     const fetchFunc = async () => {
       const data = await fetchData();
       const localData = await fetchLocalCountry();
-
       setData(data);
       setLocalData(localData);
     };

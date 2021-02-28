@@ -19,14 +19,14 @@ const CovidMap = ({countries}) => {
             doubleClickZoom={false}
             scrollWheelZoom={false}>
             <GeoJSON 
-            style={{
-                fillColor: "white",
-                weight: 1,
-                color: "black",
-                fillOpacity: 1}
-            }
-            data={countries}
-            onEachFeature={onEachCountry}
+                style={{
+                    fillColor: "white",
+                    weight: 1,
+                    color: "black",
+                    fillOpacity: 1}
+                }
+                data={countries}
+                onEachFeature={onEachCountry}
             />
         </MapContainer>
     );

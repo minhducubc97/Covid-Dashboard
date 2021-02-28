@@ -107,5 +107,3 @@ export const localData = (data, language) => {
 
   return [modifiedData, todaysData];
 };
-
-// export default globalBangliData;

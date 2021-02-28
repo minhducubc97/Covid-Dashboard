@@ -79,6 +79,8 @@ export const fetchCountryData = async () => {
     const { data } = await axios.get(`${api}/countries`);
     return data.map((info) => ({
       country: info.country,
+      confirmed: info.cases,
+      iso3: info.countryInfo.iso3,
       code: info.countryInfo.iso2,
       flag: info.countryInfo.flag,
     }));
