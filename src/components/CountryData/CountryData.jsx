@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import CountData from '../CountData/CountData';
 
-const CountryLocalData = ({ data, language }) => (
+const CountryData = ({ data, language }) => (
   <div className='col-md-4 my-3 hvr-bob'>
     <div className='row shadow align-items-center justify-content-between no-gutters'>
       <div className='col-3'>
@@ -25,4 +25,4 @@ const CountryLocalData = ({ data, language }) => (
   </div>
 );
 
-export default CountryLocalData;
+export default CountryData;

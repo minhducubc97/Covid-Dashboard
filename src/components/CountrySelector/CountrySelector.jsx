@@ -5,7 +5,7 @@ import { Select } from 'antd';
 
 const { Option } = Select;
 
-const CountryPicker = ({ handleCountryChange, localData, country, language }) => {
+const CountrySelector = ({ handleCountryChange, localData, country, language }) => {
   const [fetchedCountryData, setFetchedCountryData] = useState([]);
   useEffect(() => {
     const fetchedAPI = async () => {
@@ -56,5 +56,5 @@ const CountryPicker = ({ handleCountryChange, localData, country, language }) =>
   );
 };
 
-export default CountryPicker;
+export default CountrySelector;
 

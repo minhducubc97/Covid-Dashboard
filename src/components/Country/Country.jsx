@@ -1,7 +1,7 @@
 import React from 'react';
 
-import CountryPicker from '../CountryPicker/CountryPicker';
-import CountryLocalData from '../CountryLocalData/CountryLocalData';
+import CountrySelector from '../CountrySelector/CountrySelector';
+import CountryData from '../CountryData/CountryData';
 import CountryTodaysData from '../CountryTodaysData/CountryTodaysData';
 import CountryChart from '../Charts/CountryChart'
 import { localData } from '../../Data/data';
@@ -18,7 +18,7 @@ const Country = ({
 
   return (
     <div>
-      <CountryPicker
+      <CountrySelector
         handleCountryChange={handleCountryChange}
         localData={data}
         country={country}
@@ -50,7 +50,7 @@ const Country = ({
 
       <div className='row local'>
         {modifiedData.map((data, index) => (
-          <CountryLocalData key={index} data={data} language={language} />
+          <CountryData key={index} data={data} language={language} />
         ))}
       </div>
 
