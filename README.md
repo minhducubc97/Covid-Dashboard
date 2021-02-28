@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # Covid Dashboard
 
 Covid Dashboard web app that visualizes Covid data as well as gives people crucial information about the disease.
@@ -13,7 +15,6 @@ Covid Dashboard web app that visualizes Covid data as well as gives people cruci
 - React
 - React-leaflet
 - Bootstrap
-- [Papaparse](https://www.papaparse.com/)
 - [Open Disease Data](https://corona.lmao.ninja/)
 - [Font Awesome](https://fontawesome.com/)
 
