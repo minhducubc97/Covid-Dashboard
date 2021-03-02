@@ -60,7 +60,7 @@ const Awareness = ({ language }) => (
                         : 'Symptoms of Covid-19 can vary from person to person. They may also vary in different age groups. Some of the more commonly reported symptoms include:'}
                     </p>
                 </div>
-                <ul className='list-group list-group-flush'>
+                <ul className='list-group list-group-flush text-left'>
                   <li className='list-group-item'>
                     {language === 'vn'
                       ? 'Ho khan'
@@ -124,7 +124,7 @@ const Awareness = ({ language }) => (
                       : 'To prevent the spread of Covid-19:'}
                     </p>
                 </div>
-                <ul className='list-group list-group-flush'>
+                <ul className='list-group list-group-flush text-left'>
                   <li className='list-group-item'>
                     {language === 'vn'
                       ? 'Rửa tay thường xuyên với xà phòng và nước, hoặc đồ có cồn.'
