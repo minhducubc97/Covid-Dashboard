@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { fetchDaily } from '../../api/Covid19Api';
 import Chart from 'react-apexcharts';
-import { Bar } from 'react-chartjs-2';
 import Loading from '../Loading/Loading';
 
 const CountryChart = ({ msg, font, country, language }) => {
@@ -42,14 +41,6 @@ const CountryChart = ({ msg, font, country, language }) => {
             curve: 'smooth',
             },
             colors: ['#2E93fA', '#f36', 'green'],
-            legend: {
-            show: true,
-            fontSize: '20px',
-            itemMargin: {
-                horizontal: 10,
-                vertical: 25,
-            },
-            },
         }}
         series={[
             {
@@ -62,7 +53,7 @@ const CountryChart = ({ msg, font, country, language }) => {
             data: recovere.map((re) => re),
             },
         ]}
-        type='area'
+        type='line'
         />
     ) : null;
   }
@@ -83,14 +74,6 @@ const CountryChart = ({ msg, font, country, language }) => {
             curve: 'smooth',
             },
             colors: ['#2E93fA', '#f36', 'green'],
-            legend: {
-            show: true,
-            fontSize: '20px',
-            itemMargin: {
-                horizontal: 10,
-                vertical: 25,
-            },
-            },
         }}
         series={[
             {
@@ -103,7 +86,7 @@ const CountryChart = ({ msg, font, country, language }) => {
             data: recovere.map((re) => re),
             },
         ]}
-        type='area'
+        type='line'
         />
     ) : null;
   }
